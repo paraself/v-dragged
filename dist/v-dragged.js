@@ -75,7 +75,7 @@ function shouldUseNative() {
 	}
 }
 
-var index = shouldUseNative() ? Object.assign : function (target, source) {
+var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
 	var from;
 	var to = toObject(target);
 	var symbols;
@@ -130,6 +130,7 @@ var directive = {
       };
       binding.value({
         el: el,
+        evt: evt,
         first: true,
         clientX: evt.clientX,
         clientY: evt.clientY
@@ -142,6 +143,7 @@ var directive = {
       el.lastCoords = null;
       binding.value({
         el: el,
+        evt: evt,
         last: true,
         clientX: evt.clientX,
         clientY: evt.clientY
@@ -161,6 +163,7 @@ var directive = {
 
         binding.value({
           el: el,
+          evt: evt,
           deltaX: deltaX,
           deltaY: deltaY,
           offsetX: offsetX,
@@ -189,7 +192,7 @@ var defaultOptions = {};
 
 var VDragged = {
   install: function install(Vue, options) {
-    options = index({}, defaultOptions, options);
+    options = objectAssign({}, defaultOptions, options);
     var major = Number(Vue.version.split('.')[0]);
     var minor = Number(Vue.version.split('.')[1]);
     if (major < 2 && minor < 1) {

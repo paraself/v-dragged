@@ -15,6 +15,7 @@ export default {
       }
       binding.value({
         el,
+        evt,
         first: true,
         clientX: evt.clientX,
         clientY: evt.clientY
@@ -27,6 +28,7 @@ export default {
       el.lastCoords = null
       binding.value({
         el,
+        evt,
         last: true,
         clientX: evt.clientX,
         clientY: evt.clientY
@@ -46,6 +48,7 @@ export default {
 
         binding.value({
           el,
+          evt,
           deltaX,
           deltaY,
           offsetX,

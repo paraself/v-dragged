@@ -54,6 +54,10 @@ The argument passed to the event handler is an object containing the following p
 - The target element on which the directive binds.
 - type: HTMLElement
 
+#### `evt`
+- The event object
+- type: HTMLDivElement
+
 #### `first`
 - A boolean to indicate whether it is the first move of the drag. (drag starts here).
 - type: Boolean
