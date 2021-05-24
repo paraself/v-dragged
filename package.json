@@ -1,5 +1,5 @@
 {
-  "name": "v-dragged",
+  "name": "@more-ink/v-dragged",
   "version": "0.1.0",
   "description": "Vue directive plugin for advanced drag event detection.",
   "main": "dist/v-dragged.js",
@@ -60,5 +60,8 @@
     "rollup-watch": "^4.0.0",
     "url-loader": "^0.5.9",
     "vue": "^2.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
