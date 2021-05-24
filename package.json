@@ -1,6 +1,6 @@
 {
   "name": "@more-ink/v-dragged",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue directive plugin for advanced drag event detection.",
   "main": "dist/v-dragged.js",
   "scripts": {
